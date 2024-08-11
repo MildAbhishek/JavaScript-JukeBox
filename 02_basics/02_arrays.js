@@ -21,7 +21,7 @@ console.log(real_another_array); [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 
 console.log(Array.isArray("Abhishek")) // false
-console.log(Array.from("Abhishek")) ['A', 'b', 'h', 'i', 's', 'h', 'e', 'k']
+console.log(Array.from("Abhishek")) // ['A', 'b', 'h', 'i', 's', 'h', 'e', 'k']
 console.log(Array.from({name: "Abhishek"})) // [] super interesting as can't decide array from key or value
 
 let score1 = 100
@@ -29,3 +29,23 @@ let score2 = 200
 let score3 = 300
 
 console.log(Array.of(score1, score2, score3)); // [ 100, 200, 300 ]
+
+
+// Symbol in Array
+// Creating some arrays
+const Array1 = [1, 2, 3];
+const Array2 = [4, 5, 6];
+
+// Calling concat() function
+let Array3 = Array1.concat(Array2);
+
+// Printing the concatenated array
+console.log(Array3); // [ 1, 2, 3, 4, 5, 6 ]
+
+// Calling Symbol.isConcatSpreadable symbol
+Array2[Symbol.isConcatSpreadable] = false;
+Array3 = Array1.concat(Array2);
+
+// Printing the concatenated array
+// after calling of Symbol.isConcatSpreadable symbol
+console.log(Array3); //[1, 2, 3, Array [4, 5, 6]],  [ 1, 2, 3, [ 4, 5, 6, [Symbol(Symbol.isConcatSpreadable)]: false ] ]
