@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">We are learning DOM<span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">first</li>
+            <li class="list-item">second</li>
+            <li class="list-item">third</li>
+            <li class="list-item">fourth</li>
+        </ul>
+    </div>
+</body>
+<script>
+   let title =  document.getElementById('title');
+
+   // getting and setting attribute
+   let cls = title.getAttribute('class'); // heading
+
+   title.setAttribute('class', 'heading test')
+
+   //setting style
+   title.style.backgroundColor = 'red'
+
+    // We are learning DOM
+    console.log(title.innerText) // We are learning DOM
+    console.log(title.innerHTML) // We are learning DOM <span style="display: none;">test text</span>
+    console.log(title.textContent) // We are learning DOM test text
+
+    // querySelector (same like css selector)
+    document.querySelector('h2') // return 1st h2
+    document.querySelector('#title')
+    document.querySelector('.heading')
+    document.querySelector('input[type="password"]')
+    document.querySelector('p:first-child')
+    
+    // changing the color of 1st li
+    let ul = document.querySelector('ul');
+    let green_li = ul.querySelector('li');
+    green_li.style.backgroundColor = 'green'
+
+</script>
+</html>
