@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Road par code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="month">January</div>
+        <div class="month">February</div>
+        <div class="month">March</div>
+        <div class="month">April</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children); // HTMLCollection
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+        
+    // }
+    parent.children[1].style.color = "red"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+
+    const firstMonth = document.querySelector('.month')
+    // console.log(firstMonth);
+    // console.log(firstMonth.parentElement);
+    // console.log(firstMonth.nextElementSibling);
+
+    // Each linebreak, comment, div, text is a node in dom
+    console.log("NODES: ", parent.childNodes); // try while revising
+</script>
+
+</html>
